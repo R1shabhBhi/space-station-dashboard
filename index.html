@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Station Dashboard</title>
+    <style>
+        body {
+            background: #0b1026;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #65e6ff;
+        }
+
+        .panel {
+            background: #192343;
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 15px;
+            max-width: 400px;
+        }
+
+        button {
+            background: #65e6ff;
+            color: #0b1026;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Space Station Dashboard</h1>
+    <p>Mission Control — Earth Orbit</p>
+
+    <div class="panel">
+        <h2>🛰️ Station Status</h2>
+        <p id="status">All systems operational</p>
+        <button onclick="checkStatus()">Run System Check</button>
+    </div>
+
+    <div class="panel">
+        <h2>🌱 Space Garden</h2>
+        <p>Carrots growing: <span id="carrots">10</span></p>
+        <button onclick="waterPlants()">Water Plants 💧</button>
+    </div>
+
+    <script>
+        function checkStatus() {
+            document.getElementById("status").textContent =
+                "System check complete — all systems operational! ✅";
+        }
+
+        function waterPlants() {
+            let carrots = document.getElementById("carrots");
+            carrots.textContent = Number(carrots.textContent) + 1;
+        }
+    </script>
+</body>
+</html>
